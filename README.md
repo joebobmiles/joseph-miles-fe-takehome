@@ -2,7 +2,7 @@
 
 ## Task
 
-One of Coterie’s core frontend projects is our insurance quote flow ([https://quote.coterieinsurance.com](https://quote.coterieinsurance.com/)). You’ll create an abbreviated quote flow that collects some information from the user and shows them what types of insurance they might qualify for. The feature requirements and tech stack are listed below. If something isn’t explicitly listed you can choose how you want to handle it (e.g. styling - you could use Styled Components, Bootstrap, Sass, etc.). If you have any questions or are unsure about something don’t hesitate to contact Karl ([karl@coterieinsurance.com](mailto:karl@coterieinsurance.com)).
+One of Coterie’s core frontend projects is our insurance quote flow ([https://quote.coterieinsurance.com](https://quote.coterieinsurance.com/)). You’ll create an abbreviated quote flow that collects some information from the user and shows them what types of insurance they might qualify for. The feature requirements and tech stack are listed below. If something isn’t explicitly listed you can choose how you want to handle it (e.g. styling - you could use Styled Components, Bootstrap, Sass, etc.). If you have any questions or are unsure about something don’t hesitate to contact Karl Morand ([karl@coterieinsurance.com](mailto:karl@coterieinsurance.com)).
 
 ## Tech Stack
 
@@ -39,7 +39,7 @@ Other packages/tools may be used for styling, routing, testing, etc.
     - GL === "General Liability"
     - PL === "Professional Liability"
     - BOP === "Business Owners Policy"
-- Use git and GitHub for version control
+- Use git and GitHub for version control, share the GitHub repo with Karl Morand ([karl@coterieinsurance.com](mailto:karl@coterieinsurance.com))
 - **Have fun!** We're interested in seeing how you approach the challenge and how you solve problems with code. The goal is for you to be successful, so if you have any questions or something doesn't seem clear don't hesitate to ask. Asking questions and seeking clarification isn't a negative indicator about your skills - it shows you care and that you want to do well. Asking questions is *always* encouraged at Coterie, and our hiring process is no different.
 
 ### Example POST body
