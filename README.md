@@ -18,7 +18,7 @@ Other packages/tools may be used for styling, routing, testing, etc.
 - Inputs to collect the following information about the user's business
     - Business name (string)
     - Industry
-        - The interface should present the string description for the user to choose an option but the data sent to the server as the `industryId` should be the id (see the example payload below)
+        - The interface should present the string description for the user to choose an option but the data sent to the server as the `industryId` should be the id (see the example POST body below)
         - 10537 - Plumber
         - 10391 - Software developer
         - 10415 - Lawyer
