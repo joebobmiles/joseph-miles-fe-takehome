@@ -28,7 +28,7 @@ Other packages/tools may be used for styling, routing, testing, etc.
     - Annual payroll (integer with these options: $50k, $75k, $100k, $150k, $200k)
     - Number of employees (integer)
     - Zip code (string)
-        - This will need to sent in an object that is in a `locations` array (see example payload below)
+        - This will need to sent in an object that is in a `locations` array (see example POST body below)
 
 - The input fields should be split up over at least two pages (you can choose how to break them up and how to handle routing)
 - After collecting the information from the user you will `POST` it to our Create Application endpoint:
@@ -42,7 +42,7 @@ Other packages/tools may be used for styling, routing, testing, etc.
 - Use git and GitHub for version control
 - **Have fun!** We're interested in seeing how you approach the challenge and how you solve problems with code. The goal is for you to be successful, so if you have any questions or something doesn't seem clear don't hesitate to ask. Asking questions and seeking clarification isn't a negative indicator about your skills - it shows you care and that you want to do well. Asking questions is *always* encouraged at Coterie, and our hiring process is no different.
 
-### Example request
+### Example POST body
 
 ![sample-payload.png](sample-payload.png)
 
