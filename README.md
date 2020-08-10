@@ -11,7 +11,7 @@ Use the following JS packages to make the app
 - React (Create React App) - https://create-react-app.dev/
 - Redux (Redux Toolkit) - https://redux-toolkit.js.org/
 
-Other packages/tools may be used for styling, routing, testing, etc.
+Other packages/tools may be used for styling, routing, testing, etc. Please do not use any other React boilerplates or code generators (aside from Create React App). Those can help get projects going quickly, but we want to see how you write code and solve problems - we realize this means you might have a less thorough solution, and that's OK. You can have a list of "if I had more time I would have added XYZ".
 
 ## Requirements
 
@@ -39,7 +39,7 @@ Other packages/tools may be used for styling, routing, testing, etc.
     - GL === "General Liability"
     - PL === "Professional Liability"
     - BOP === "Business Owners Policy"
-- Use git and GitHub for version control, share the GitHub repo with Karl Morand ([karl@coterieinsurance.com](mailto:karl@coterieinsurance.com))
+- Use git and GitHub for version control. Create a new GitHub repo for your project and share it with Karl Morand ([karl@coterieinsurance.com](mailto:karl@coterieinsurance.com))
 - **Have fun!** We're interested in seeing how you approach the challenge and how you solve problems with code. The goal is for you to be successful, so if you have any questions or something doesn't seem clear don't hesitate to ask. Asking questions and seeking clarification isn't a negative indicator about your skills - it shows you care and that you want to do well. Asking questions is *always* encouraged at Coterie, and our hiring process is no different.
 
 ### Example POST body
