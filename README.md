@@ -39,7 +39,7 @@ Other packages/tools may be used for styling, routing, testing, etc. Please do n
     - GL === "General Liability"
     - PL === "Professional Liability"
     - BOP === "Business Owners Policy"
-- Use git and GitHub for version control. Create a new GitHub repo for your project and share it with Karl Morand ([karl@coterieinsurance.com](mailto:karl@coterieinsurance.com))
+- Use git and GitHub for version control. Create a new GitHub repo for your project named `{first name}-{last name}-fe-takehome` and share it with Karl Morand ([karl@coterieinsurance.com](mailto:karl@coterieinsurance.com))  `karlmorand` on GitHub
 - **Have fun!** We're interested in seeing how you approach the challenge and how you solve problems with code. The goal is for you to be successful, so if you have any questions or something doesn't seem clear don't hesitate to ask. Asking questions and seeking clarification isn't a negative indicator about your skills - it shows you care and that you want to do well. Asking questions is *always* encouraged at Coterie, and our hiring process is no different.
 
 ### Example POST body
