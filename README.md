@@ -2,7 +2,7 @@
 
 ## Task
 
-One of Coterie’s core frontend projects is our insurance quote flow ([https://quote.coterieinsurance.com](https://quote.coterieinsurance.com/)). You’ll create an abbreviated quote flow that collects some information from the user and shows them what types of insurance they might qualify for. The feature requirements and tech stack are listed below. If something isn’t explicitly listed you can choose how you want to handle it (e.g. styling - you could use Styled Components, Bootstrap, Sass, etc.). If you have any questions or are unsure about something don’t hesitate to contact Karl Morand ([karl@coterieinsurance.com](mailto:karl@coterieinsurance.com)).
+One of Coterie’s core frontend projects is our insurance quote flow ([https://quote.coterieinsurance.com](https://quote.coterieinsurance.com/)). You’ll create an abbreviated quote flow that collects some information from the user and shows them what types of insurance they might qualify for. The feature requirements and tech stack are listed below. If something isn’t explicitly listed you can choose how you want to handle it (e.g. styling - you could use Styled Components, Bootstrap, Sass, etc.). If you have any questions or are unsure about something don’t hesitate to contact Jessica Fane ([jessica@coterieinsurance.com](mailto:jessica@coterieinsurance.com)).
 
 ## Tech Stack
 
@@ -10,8 +10,9 @@ Use the following JS packages to make the app
 
 - React (Create React App) - https://create-react-app.dev/
 - Redux (Redux Toolkit) - https://redux-toolkit.js.org/
+- Unit tests (React Testing Library or similar) - https://testing-library.com/docs/react-testing-library/intro/
 
-Other packages/tools may be used for styling, routing, testing, etc. Please do not use any other React boilerplates or code generators (aside from Create React App). Those can help get projects going quickly, but we want to see how you write code and solve problems - we realize this means you might have a less thorough solution, and that's OK. You can have a list of "if I had more time I would have added XYZ".
+Other packages/tools may be used for styling, routing, testing, etc. Please do not use any other React boilerplates or code generators (aside from Create React App). Those can help get projects going quickly, but we want to see how you write clean code and solve problems - we realize this means you might have a less thorough solution, and that's OK. You can have a list of "if I had more time I would have added XYZ".
 
 ## Requirements
 
@@ -39,7 +40,7 @@ Other packages/tools may be used for styling, routing, testing, etc. Please do n
     - GL === "General Liability"
     - PL === "Professional Liability"
     - BOP === "Business Owners Policy"
-- Use git and GitHub for version control. Create a new GitHub repo for your project named `{first name}-{last name}-fe-takehome` and share it with Karl Morand ([karl@coterieinsurance.com](mailto:karl@coterieinsurance.com))  `karlmorand` on GitHub
+- Use git and GitHub for version control. Create a new GitHub repo for your project named `{first name}-{last name}-fe-takehome` and share it with Kurt DiPaolo ([kurt@coterieinsurance.com](mailto:kurt@coterieinsurance.com))  `kdipaolo` and Jon Prell ([jon@coterieinsurance.com](mailto:jon@coterieinsurance.com))  `JTP709` on GitHub
 - **Have fun!** We're interested in seeing how you approach the challenge and how you solve problems with code. The goal is for you to be successful, so if you have any questions or something doesn't seem clear don't hesitate to ask. Asking questions and seeking clarification isn't a negative indicator about your skills - it shows you care and that you want to do well. Asking questions is *always* encouraged at Coterie, and our hiring process is no different.
 
 ### Example POST body
@@ -49,3 +50,8 @@ Other packages/tools may be used for styling, routing, testing, etc. Please do n
 ### Example response
 
 ![sample-response.png](sample-response.png)
+
+
+## What to expect next 
+- A pairing session with one of our front end developers where you'll work together to add a feature.
+- In the panel interview, be prepared to run the application locally, walk through the UI, and share your code with us.
