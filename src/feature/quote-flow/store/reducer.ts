@@ -9,7 +9,10 @@ import {
   ZipAction
 } from '../type'
 
-export const businessName = (state: string, action: BusinessNameAction): string => {
+export const businessName = (
+  state: string = '', // eslint-disable-line @typescript-eslint/default-param-last
+  action: BusinessNameAction
+): string => {
   switch (action.type) {
     case 'set business name':
       return action.name
@@ -19,7 +22,10 @@ export const businessName = (state: string, action: BusinessNameAction): string 
   }
 }
 
-export const contactEmail = (state: string, action: ContactEmailAction): string => {
+export const contactEmail = (
+  state: string = '', // eslint-disable-line @typescript-eslint/default-param-last
+  action: ContactEmailAction
+): string => {
   switch (action.type) {
     case 'set contact email':
       return action.email
@@ -29,7 +35,10 @@ export const contactEmail = (state: string, action: ContactEmailAction): string 
   }
 }
 
-export const grossAnnualSales = (state: number, action: AnnualSalesAction): number => {
+export const grossAnnualSales = (
+  state: number = 0, // eslint-disable-line @typescript-eslint/default-param-last
+  action: AnnualSalesAction
+): number => {
   switch (action.type) {
     case 'set gross annual sales':
       return action.sales
@@ -39,7 +48,10 @@ export const grossAnnualSales = (state: number, action: AnnualSalesAction): numb
   }
 }
 
-export const annualPayroll = (state: number, action: AnnualPayrollAction): number => {
+export const annualPayroll = (
+  state: number = 0, // eslint-disable-line @typescript-eslint/default-param-last
+  action: AnnualPayrollAction
+): number => {
   switch (action.type) {
     case 'set annual payroll':
       return action.payroll
@@ -49,7 +61,10 @@ export const annualPayroll = (state: number, action: AnnualPayrollAction): numbe
   }
 }
 
-export const numEmployees = (state: number, action: NumEmployeesAction): number => {
+export const numEmployees = (
+  state: number = 0, // eslint-disable-line @typescript-eslint/default-param-last
+  action: NumEmployeesAction
+): number => {
   switch (action.type) {
     case 'set number of employees':
       return action.employees
@@ -59,7 +74,10 @@ export const numEmployees = (state: number, action: NumEmployeesAction): number 
   }
 }
 
-export const industryId = (state: string, action: IndustryIdAction): string => {
+export const industryId = (
+  state: string = '', // eslint-disable-line @typescript-eslint/default-param-last
+  action: IndustryIdAction
+): string => {
   switch (action.type) {
     case 'set industry id':
       return action.id
@@ -69,7 +87,10 @@ export const industryId = (state: string, action: IndustryIdAction): string => {
   }
 }
 
-export const zip = (state: string, action: ZipAction): string => {
+export const zip = (
+  state: string = '', // eslint-disable-line @typescript-eslint/default-param-last
+  action: ZipAction
+): string => {
   switch (action.type) {
     case 'set zip':
       return action.zip

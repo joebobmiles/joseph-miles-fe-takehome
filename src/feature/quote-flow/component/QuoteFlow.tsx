@@ -1,7 +1,7 @@
 import React from 'react'
 import { PARTNER_TOKEN } from '@/config'
 
-export const QuoteForm = (): JSX.Element => {
+export const QuoteFlow = (): JSX.Element => {
   const [businessName, setBusinessName] = React.useState('')
   const [contactEmail, setContactEmail] = React.useState('')
   const [grossAnnualSales, setGrossAnnualSales] = React.useState(0)

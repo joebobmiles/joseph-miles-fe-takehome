@@ -2,17 +2,17 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
-import { QuoteForm } from './QuoteForm'
+import { QuoteFlow } from './QuoteFlow'
 
-describe('QuoteForm', () => {
+describe('QuoteFlow', () => {
   describe('Business name section', () => {
     it('Has the label "Business Name."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/business name/i)).toBeInTheDocument()
     })
 
     it('Has the type of "text."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/business name/i))
         .toHaveAttribute('type', 'text')
     })
@@ -20,7 +20,7 @@ describe('QuoteForm', () => {
 
   describe('Industry section', () => {
     it('Has the label "Industry."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/industry/i)).toBeInTheDocument()
     })
 
@@ -30,7 +30,7 @@ describe('QuoteForm', () => {
       ['Lawyer', 10415],
       ['Handyman', 10109]
     ])('Has an entry labelled %p with a value of %p.', (label, value) => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByText(label))
         .toHaveAttribute('value', value.toString())
     })
@@ -38,19 +38,19 @@ describe('QuoteForm', () => {
 
   describe('Email section', () => {
     it('Has the label "Email."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/email/i)).toBeInTheDocument()
     })
 
     it('Has a type of "email."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/email/i)).toHaveAttribute('type', 'email')
     })
   })
 
   describe('Annual sales section', () => {
     it('Has the label "Annual Sales."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/annual sales/i)).toBeInTheDocument()
     })
 
@@ -61,7 +61,7 @@ describe('QuoteForm', () => {
       ['$150k', 150000],
       ['$200k', 200000]
     ])('Has an entry labelled %p with a value of %p.', (label, value) => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       // Grabbing the first assumes that all are fetched in order of appearance.
       // This is a hack for now and it would be safer to pull the section out as
       // its own component and testing in isolation so that we're not relying on
@@ -73,7 +73,7 @@ describe('QuoteForm', () => {
 
   describe('Annual payroll section', () => {
     it('Has the label "Annual Payroll."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/annual payroll/i)).toBeInTheDocument()
     })
 
@@ -84,7 +84,7 @@ describe('QuoteForm', () => {
       ['$150k', 150000],
       ['$200k', 200000]
     ])('Has an entry labelled %p with a value of %p.', (label, value) => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       // Grabbing the second assumes that all are fetched in order of appearance.
       // This is a hack for now and it would be safer to pull the section out as
       // its own component and testing in isolation so that we're not relying on
@@ -96,12 +96,12 @@ describe('QuoteForm', () => {
 
   describe('Number of employees section', () => {
     it('Has the label "Number of employees."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/number of employees/i)).toBeInTheDocument()
     })
 
     it('Has the type of "number."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/number of employees/i))
         .toHaveAttribute('type', 'number')
     })
@@ -109,12 +109,12 @@ describe('QuoteForm', () => {
 
   describe('Zip code section', () => {
     it('Has the label "Zip code."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/zip code/i)).toBeInTheDocument()
     })
 
     it('Has the type of "text."', () => {
-      render(<QuoteForm />)
+      render(<QuoteFlow />)
       expect(screen.getByLabelText(/zip code/i))
         .toHaveAttribute('type', 'text')
     })

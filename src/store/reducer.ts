@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import { quoteForm } from '@/feature/quote-form'
+import { quoteFlow } from '@/feature/quote-flow'
 
 export default combineReducers({
-  quoteForm
+  quoteFlow
 })

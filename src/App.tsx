@@ -3,10 +3,12 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
 import reducer from '@/store/reducer'
-import { QuoteForm } from '@/feature/quote-form'
+import { QuoteFlow } from '@/feature/quote-flow'
 
 export default (): JSX.Element => (
-  <Provider store={createStore(reducer)}>
-    <QuoteForm />
+  <Provider
+    store={createStore(reducer)}
+  >
+    <QuoteFlow />
   </Provider>
 )
