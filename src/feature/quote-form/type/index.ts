@@ -19,3 +19,9 @@ export type AnnualSalesAction = SetAnnualSalesAction
 export type SetAnnualSalesAction = Action<'set gross annual sales'> & {
   sales: number
 }
+
+export type AnnualPayrollAction = SetAnnualPayrollAction
+
+export type SetAnnualPayrollAction = Action<'set annual payroll'> & {
+  payroll: number
+}
