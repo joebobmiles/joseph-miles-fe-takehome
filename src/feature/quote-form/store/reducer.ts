@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { BusinessNameAction } from '../type'
+import { BusinessNameAction, ContactEmailAction } from '../type'
 
 export const businessName = (action: BusinessNameAction): string => {
   switch (action.type) {
@@ -11,6 +11,17 @@ export const businessName = (action: BusinessNameAction): string => {
   }
 }
 
+export const contactEmail = (action: ContactEmailAction): string => {
+  switch (action.type) {
+    case 'set contact email':
+      return action.email
+
+    default:
+      return ''
+  }
+}
+
 export const reducer = combineReducers({
-  businessName
+  businessName,
+  contactEmail
 })
