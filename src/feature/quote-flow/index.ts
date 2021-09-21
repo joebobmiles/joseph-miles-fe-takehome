@@ -1,2 +1,2 @@
-export * from './component/QuoteFlow'
+export * from './component'
 export * from './store'

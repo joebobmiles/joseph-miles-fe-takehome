@@ -1,15 +1,41 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
 import { PARTNER_TOKEN } from '@/config'
+import { RootState } from '@/type'
 
-export const QuoteFlow = (): JSX.Element => {
-  const [businessName, setBusinessName] = React.useState('')
-  const [contactEmail, setContactEmail] = React.useState('')
-  const [grossAnnualSales, setGrossAnnualSales] = React.useState(0)
-  const [annualPayroll, setAnnualPayroll] = React.useState(0)
-  const [numEmployees, setNumEmployees] = React.useState(0)
-  const [industryId, setIndustryId] = React.useState('')
-  const [zip, setZip] = React.useState('')
+interface QuoteFlowProps {
+  businessName?: string
+  setBusinessName?: (name: string) => void
 
+  contactEmail?: string
+  setContactEmail?: (email: string) => void
+
+  grossAnnualSales?: number
+  setGrossAnnualSales?: (sales: number) => void
+
+  annualPayroll?: number
+  setAnnualPayroll?: (payroll: number) => void
+
+  numEmployees?: number
+  setNumEmployees?: (employees: number) => void
+
+  industryId?: string
+  setIndustryId?: (id: string) => void
+
+  zip?: string
+  setZip?: (zip: string) => void
+}
+
+const QuoteFlow = ({
+  businessName = '', setBusinessName = () => null,
+  contactEmail = '', setContactEmail = () => null,
+  grossAnnualSales = 0, setGrossAnnualSales = () => null,
+  annualPayroll = 0, setAnnualPayroll = () => null,
+  numEmployees = 0, setNumEmployees = () => null,
+  industryId = '', setIndustryId = () => null,
+  zip = '', setZip = () => null
+}: QuoteFlowProps): JSX.Element => {
   return (
     <form
       onSubmit={async (e) => {
@@ -158,3 +184,18 @@ export const QuoteFlow = (): JSX.Element => {
     </form>
   )
 }
+
+const stateToProps = ({
+  quoteFlow: {
+    businessName,
+    contactEmail
+  }
+}: RootState): {
+  businessName: string
+  contactEmail: string
+} => ({
+  businessName,
+  contactEmail
+})
+
+export default connect(stateToProps)(QuoteFlow)
