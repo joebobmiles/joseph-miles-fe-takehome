@@ -50,6 +50,7 @@ export const QuoteForm = (): JSX.Element => {
         <input
           type='text'
           id='business-name'
+          required
           value={businessName}
           onChange={({ target }) => {
             setBusinessName((target as HTMLInputElement).value)
@@ -60,6 +61,7 @@ export const QuoteForm = (): JSX.Element => {
         <label htmlFor='industry'>Industry</label>
         <select
           id='industry'
+          required
           value={industryId}
           onChange={({ target }) => {
             setIndustryId((target as HTMLSelectElement).value)
@@ -77,6 +79,7 @@ export const QuoteForm = (): JSX.Element => {
         <input
           type='email'
           id='email'
+          required
           value={contactEmail}
           onChange={({ target }) => {
             setContactEmail((target as HTMLInputElement).value)
@@ -87,6 +90,7 @@ export const QuoteForm = (): JSX.Element => {
         <label htmlFor='annual-sales'>Annual Sales</label>
         <select
           id='annual-sales'
+          required
           value={grossAnnualSales}
           onChange={({ target }) => {
             setGrossAnnualSales(
@@ -106,6 +110,7 @@ export const QuoteForm = (): JSX.Element => {
         <label htmlFor='annual-payroll'>Annual Payroll</label>
         <select
           id='annual-payroll'
+          required
           value={annualPayroll}
           onChange={({ target }) => {
             setAnnualPayroll(
@@ -125,6 +130,7 @@ export const QuoteForm = (): JSX.Element => {
         <label htmlFor='employee-headcount'>Number of Employees</label>
         <input
           type='number'
+          required
           id='employee-headcount'
           value={numEmployees}
           onChange={({ target }) => {
@@ -139,6 +145,7 @@ export const QuoteForm = (): JSX.Element => {
         <input
           type='text'
           id='zip-code'
+          required
           value={zip}
           onChange={({ target }) => {
             setZip((target as HTMLInputElement).value)
