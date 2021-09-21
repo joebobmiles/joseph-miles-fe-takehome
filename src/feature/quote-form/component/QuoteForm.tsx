@@ -1,4 +1,5 @@
 import React from 'react'
+import { PARTNER_TOKEN } from '@/config'
 
 export const QuoteForm = (): JSX.Element => {
   const [businessName, setBusinessName] = React.useState('')
@@ -11,11 +12,11 @@ export const QuoteForm = (): JSX.Element => {
 
   return (
     <form
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault()
         e.stopPropagation()
 
-        console.log({
+        const formData = {
           businessName,
           contactEmail,
           grossAnnualSales,
@@ -27,7 +28,21 @@ export const QuoteForm = (): JSX.Element => {
               zip
             }
           ]
-        })
+        }
+
+        const response = await fetch(
+          'https://api-sandbox.coterieinsurance.com/v1/commercial/applications',
+          {
+            method: 'post',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `token ${PARTNER_TOKEN}`
+            },
+            body: JSON.stringify(formData)
+          }
+        ).then(async (response): Promise<any> => await response.json())
+
+        console.log(response)
       }}
     >
       <section>
