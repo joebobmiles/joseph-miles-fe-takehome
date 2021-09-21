@@ -1,0 +1,45 @@
+{
+  "name": "frontend-takehome-project",
+  "version": "1.0.0",
+  "description": "One of Coterie’s core frontend projects is our insurance quote flow ([https://quote.coterieinsurance.com](https://quote.coterieinsurance.com/)). You’ll create an abbreviated quote flow that collects some information from the user and shows them what types of insurance they might qualify for. The feature requirements and tech stack are listed below. If something isn’t explicitly listed you can choose how you want to handle it (e.g. styling - you could use Styled Components, Bootstrap, Sass, etc.). If you have any questions or are unsure about something don’t hesitate to contact Jessica Fane ([jessica@coterieinsurance.com](mailto:jessica@coterieinsurance.com)).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joebobmiles/frontend-takehome-project.git"
+  },
+  "keywords": [],
+  "author": "Joseph R Miles <joe@jrm.dev>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joebobmiles/frontend-takehome-project/issues"
+  },
+  "homepage": "https://github.com/joebobmiles/frontend-takehome-project#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.0",
+    "@types/jest": "^27.0.2",
+    "@types/react": "^17.0.22",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-redux": "^7.1.18",
+    "@types/redux": "^3.6.0",
+    "husky": "^7.0.2",
+    "jest": "^27.2.1",
+    "ts-standard": "^10.0.0",
+    "typescript": "^4.4.3",
+    "vite": "^2.5.10"
+  },
+  "ts-standard": {
+    "project": "./tsconfig.lint.json"
+  }
+}
