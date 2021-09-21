@@ -25,3 +25,9 @@ export type AnnualPayrollAction = SetAnnualPayrollAction
 export type SetAnnualPayrollAction = Action<'set annual payroll'> & {
   payroll: number
 }
+
+export type NumEmployeesAction = SetNumEmployeesAction
+
+export type SetNumEmployeesAction = Action<'set number of employees'> & {
+  employees: number
+}

@@ -3,7 +3,8 @@ import {
   BusinessNameAction,
   ContactEmailAction,
   AnnualSalesAction,
-  AnnualPayrollAction
+  AnnualPayrollAction,
+  NumEmployeesAction
 } from '../type'
 
 export const businessName = (state: string, action: BusinessNameAction): string => {
@@ -46,9 +47,20 @@ export const annualPayroll = (state: number, action: AnnualPayrollAction): numbe
   }
 }
 
+export const numEmployees = (state: number, action: NumEmployeesAction): number => {
+  switch (action.type) {
+    case 'set number of employees':
+      return action.employees
+
+    default:
+      return state
+  }
+}
+
 export const reducer = combineReducers({
   businessName,
   contactEmail,
   grossAnnualSales,
-  annualPayroll
+  annualPayroll,
+  numEmployees
 })
