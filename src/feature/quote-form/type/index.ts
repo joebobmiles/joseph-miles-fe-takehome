@@ -13,3 +13,9 @@ export type ContactEmailAction = SetContactEmailAction
 export type SetContactEmailAction = Action<'set contact email'> & {
   email: string
 }
+
+export type AnnualSalesAction = SetAnnualSalesAction
+
+export type SetAnnualSalesAction = Action<'set gross annual sales'> & {
+  sales: number
+}

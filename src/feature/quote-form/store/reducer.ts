@@ -1,5 +1,9 @@
 import { combineReducers } from 'redux'
-import { BusinessNameAction, ContactEmailAction } from '../type'
+import {
+  BusinessNameAction,
+  ContactEmailAction,
+  AnnualSalesAction
+} from '../type'
 
 export const businessName = (state: string, action: BusinessNameAction): string => {
   switch (action.type) {
@@ -21,7 +25,18 @@ export const contactEmail = (state: string, action: ContactEmailAction): string 
   }
 }
 
+export const grossAnnualSales = (state: number, action: AnnualSalesAction): number => {
+  switch (action.type) {
+    case 'set gross annual sales':
+      return action.sales
+
+    default:
+      return state
+  }
+}
+
 export const reducer = combineReducers({
   businessName,
-  contactEmail
+  contactEmail,
+  grossAnnualSales
 })
