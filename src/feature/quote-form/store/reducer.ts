@@ -5,7 +5,8 @@ import {
   AnnualSalesAction,
   AnnualPayrollAction,
   NumEmployeesAction,
-  IndustryIdAction
+  IndustryIdAction,
+  ZipAction
 } from '../type'
 
 export const businessName = (state: string, action: BusinessNameAction): string => {
@@ -68,11 +69,22 @@ export const industryId = (state: string, action: IndustryIdAction): string => {
   }
 }
 
+export const zip = (state: string, action: ZipAction): string => {
+  switch (action.type) {
+    case 'set zip':
+      return action.zip
+
+    default:
+      return state
+  }
+}
+
 export const reducer = combineReducers({
   businessName,
   contactEmail,
   grossAnnualSales,
   annualPayroll,
   numEmployees,
-  industryId
+  industryId,
+  zip
 })

@@ -37,3 +37,9 @@ export type IndustryIdAction = SetIndustryIdAction
 export type SetIndustryIdAction = Action<'set industry id'> & {
   id: string
 }
+
+export type ZipAction = SetZipAction
+
+export type SetZipAction = Action<'set zip'> & {
+  zip: string
+}
