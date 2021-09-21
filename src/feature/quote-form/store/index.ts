@@ -1,2 +1,2 @@
-export { reducer } from './reducer'
+export { reducer as quoteForm } from './reducer'
 export * from './action'
