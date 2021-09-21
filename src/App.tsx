@@ -5,9 +5,7 @@ import store from '@/store'
 import { QuoteFlow } from '@/feature/quote-flow'
 
 export default (): JSX.Element => (
-  <Provider
-    store={store}
-  >
+  <Provider store={store}>
     <QuoteFlow />
   </Provider>
 )

@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
 
 import { PARTNER_TOKEN } from '@/config'
 import { RootState } from '@/type'
-import { Dispatch } from 'redux'
 import {
   setBusinessName,
   setContactEmail,
