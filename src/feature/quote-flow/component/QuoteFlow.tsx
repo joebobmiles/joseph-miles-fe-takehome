@@ -14,28 +14,9 @@ import {
   setZip
 } from '../store'
 
-interface QuoteFlowProps {
-  businessName?: string
-  setBusinessName?: (name: string) => void
-
-  contactEmail?: string
-  setContactEmail?: (email: string) => void
-
-  grossAnnualSales?: number
-  setGrossAnnualSales?: (sales: number) => void
-
-  annualPayroll?: number
-  setAnnualPayroll?: (payroll: number) => void
-
-  numEmployees?: number
-  setNumEmployees?: (employees: number) => void
-
-  industryId?: string
-  setIndustryId?: (id: string) => void
-
-  zip?: string
-  setZip?: (zip: string) => void
-}
+type QuoteFlowProps =
+  Partial<ReturnType<typeof stateToProps>> &
+  Partial<ReturnType<typeof dispatchToProps>>
 
 const QuoteFlow = ({
   businessName = '', setBusinessName = () => null,
