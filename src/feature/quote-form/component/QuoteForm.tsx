@@ -1,7 +1,14 @@
 import React from 'react'
 
 export const QuoteForm = (): JSX.Element => (
-  <form>
+  <form
+    onSubmit={(e) => {
+      e.preventDefault()
+      e.stopPropagation()
+
+      console.log('submitted')
+    }}
+  >
     <section>
       <label htmlFor='business-name'>Business Name</label>
       <input type='text' id='business-name' />
@@ -46,6 +53,9 @@ export const QuoteForm = (): JSX.Element => (
     <section>
       <label htmlFor='zip-code'>Zip Code</label>
       <input type='text' id='zip-code' />
+    </section>
+    <section>
+      <button type='submit'>Get your quote!</button>
     </section>
   </form>
 )
