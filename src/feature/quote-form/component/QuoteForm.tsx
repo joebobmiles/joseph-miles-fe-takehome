@@ -74,15 +74,16 @@ export const QuoteForm = (): JSX.Element => {
           value={grossAnnualSales}
           onChange={({ target }) => {
             setGrossAnnualSales(
-              parseInt((target as HTMLSelectElement).value, 10) * 1000
+              parseInt((target as HTMLSelectElement).value, 10)
             )
           }}
         >
-          <option value={50}>$50k</option>
-          <option value={75}>$75k</option>
-          <option value={100}>$100k</option>
-          <option value={150}>$150k</option>
-          <option value={200}>$200k</option>
+          <option value={0}>$0</option>
+          <option value={50000}>$50k</option>
+          <option value={75000}>$75k</option>
+          <option value={100000}>$100k</option>
+          <option value={150000}>$150k</option>
+          <option value={200000}>$200k</option>
         </select>
       </section>
       <section>
@@ -92,15 +93,16 @@ export const QuoteForm = (): JSX.Element => {
           value={annualPayroll}
           onChange={({ target }) => {
             setAnnualPayroll(
-              parseInt((target as HTMLSelectElement).value, 10) * 1000
+              parseInt((target as HTMLSelectElement).value, 10)
             )
           }}
         >
-          <option value={50}>$50k</option>
-          <option value={75}>$75k</option>
-          <option value={100}>$100k</option>
-          <option value={150}>$150k</option>
-          <option value={200}>$200k</option>
+          <option value={0}>$0</option>
+          <option value={50000}>$50k</option>
+          <option value={75000}>$75k</option>
+          <option value={100000}>$100k</option>
+          <option value={150000}>$150k</option>
+          <option value={200000}>$200k</option>
         </select>
       </section>
       <section>

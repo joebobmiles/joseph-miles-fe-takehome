@@ -55,11 +55,11 @@ describe('QuoteForm', () => {
     })
 
     it.each([
-      ['$50k', 50],
-      ['$75k', 75],
-      ['$100k', 100],
-      ['$150k', 150],
-      ['$200k', 200]
+      ['$50k', 50000],
+      ['$75k', 75000],
+      ['$100k', 100000],
+      ['$150k', 150000],
+      ['$200k', 200000]
     ])('Has an entry labelled %p with a value of %p.', (label, value) => {
       render(<QuoteForm />)
       // Grabbing the first assumes that all are fetched in order of appearance.
@@ -78,11 +78,11 @@ describe('QuoteForm', () => {
     })
 
     it.each([
-      ['$50k', 50],
-      ['$75k', 75],
-      ['$100k', 100],
-      ['$150k', 150],
-      ['$200k', 200]
+      ['$50k', 50000],
+      ['$75k', 75000],
+      ['$100k', 100000],
+      ['$150k', 150000],
+      ['$200k', 200000]
     ])('Has an entry labelled %p with a value of %p.', (label, value) => {
       render(<QuoteForm />)
       // Grabbing the second assumes that all are fetched in order of appearance.
