@@ -50,6 +50,7 @@ export const QuoteForm = (): JSX.Element => {
             setIndustryId((target as HTMLSelectElement).value)
           }}
         >
+          <option value={0} hidden />
           <option value={10537}>Plumber</option>
           <option value={10391}>Software developer</option>
           <option value={10415}>Lawyer</option>
@@ -78,7 +79,7 @@ export const QuoteForm = (): JSX.Element => {
             )
           }}
         >
-          <option value={0}>$0</option>
+          <option value={0} hidden>$0</option>
           <option value={50000}>$50k</option>
           <option value={75000}>$75k</option>
           <option value={100000}>$100k</option>
@@ -97,7 +98,7 @@ export const QuoteForm = (): JSX.Element => {
             )
           }}
         >
-          <option value={0}>$0</option>
+          <option value={0} hidden>$0</option>
           <option value={50000}>$50k</option>
           <option value={75000}>$75k</option>
           <option value={100000}>$100k</option>
