@@ -31,3 +31,9 @@ export type NumEmployeesAction = SetNumEmployeesAction
 export type SetNumEmployeesAction = Action<'set number of employees'> & {
   employees: number
 }
+
+export type IndustryIdAction = SetIndustryIdAction
+
+export type SetIndustryIdAction = Action<'set industry id'> & {
+  id: string
+}
