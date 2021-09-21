@@ -3,6 +3,16 @@ import { connect } from 'react-redux'
 
 import { PARTNER_TOKEN } from '@/config'
 import { RootState } from '@/type'
+import { Dispatch } from 'redux'
+import {
+  setBusinessName,
+  setContactEmail,
+  setGrossAnnualSales,
+  setAnnualPayroll,
+  setNumEmployees,
+  setIndustryId,
+  setZip
+} from '../store'
 
 interface QuoteFlowProps {
   businessName?: string
@@ -188,14 +198,47 @@ const QuoteFlow = ({
 const stateToProps = ({
   quoteFlow: {
     businessName,
-    contactEmail
+    contactEmail,
+    grossAnnualSales,
+    annualPayroll,
+    numEmployees,
+    industryId,
+    zip
   }
 }: RootState): {
   businessName: string
   contactEmail: string
+  grossAnnualSales: number
+  annualPayroll: number
+  numEmployees: number
+  industryId: string
+  zip: string
 } => ({
   businessName,
-  contactEmail
+  contactEmail,
+  grossAnnualSales,
+  annualPayroll,
+  numEmployees,
+  industryId,
+  zip
 })
 
-export default connect(stateToProps)(QuoteFlow)
+const dispatchToProps = (dispatch: Dispatch): {
+  setBusinessName: (name: string) => void
+  setContactEmail: (email: string) => void
+  setGrossAnnualSales: (sales: number) => void
+  setAnnualPayroll: (payroll: number) => void
+  setNumEmployees: (employees: number) => void
+  setIndustryId: (industryId: string) => void
+  setZip: (zip: string) => void
+} => ({
+  setBusinessName: (name) => dispatch(setBusinessName(name)),
+  setContactEmail: (email) => dispatch(setContactEmail(email)),
+  setGrossAnnualSales: (sales) => dispatch(setGrossAnnualSales(sales)),
+  setAnnualPayroll: (payroll) => dispatch(setAnnualPayroll(payroll)),
+  setNumEmployees: (employees) => dispatch(setNumEmployees(employees)),
+  setIndustryId: (id) => dispatch(setIndustryId(id)),
+  setZip: (zip) => dispatch(setZip(zip))
+})
+
+export default connect(stateToProps, dispatchToProps)(QuoteFlow)
