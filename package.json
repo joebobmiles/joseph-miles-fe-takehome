@@ -4,7 +4,9 @@
   "description": "One of Coterie’s core frontend projects is our insurance quote flow ([https://quote.coterieinsurance.com](https://quote.coterieinsurance.com/)). You’ll create an abbreviated quote flow that collects some information from the user and shows them what types of insurance they might qualify for. The feature requirements and tech stack are listed below. If something isn’t explicitly listed you can choose how you want to handle it (e.g. styling - you could use Styled Components, Bootstrap, Sass, etc.). If you have any questions or are unsure about something don’t hesitate to contact Jessica Fane ([jessica@coterieinsurance.com](mailto:jessica@coterieinsurance.com)).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "vite",
+    "test": "jest",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
