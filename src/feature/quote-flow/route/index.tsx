@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 
 import { BusinessInfo } from './BusinessInfo'
 import { Contact } from './Contact'
@@ -19,6 +19,9 @@ export const QuoteFlowRoutes = (): JSX.Element => (
     </Route>
     <Route path='/result'>
       <Result />
+    </Route>
+    <Route path='*'>
+      <Redirect to='/industry' />
     </Route>
   </>
 )

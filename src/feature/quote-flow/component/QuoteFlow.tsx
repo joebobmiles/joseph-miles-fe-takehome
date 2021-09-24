@@ -1,9 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Switch } from 'react-router-dom'
 
-import { PARTNER_TOKEN } from '@/config'
 import { RootState } from '@/type'
 import {
   setBusinessName,
@@ -14,6 +13,7 @@ import {
   setIndustryId,
   setZip
 } from '../store'
+import { QuoteFlowRoutes } from '../route'
 
 type QuoteFlowProps =
   Partial<ReturnType<typeof stateToProps>> &
@@ -29,7 +29,15 @@ const QuoteFlow = ({
   zip = '', setZip = () => null
 }: QuoteFlowProps): JSX.Element => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/getquote'>
+      <Switch>
+        <QuoteFlowRoutes />
+      </Switch>
+    </BrowserRouter>
+  )
+}
+
+/*
       <form
         onSubmit={async (e) => {
           e.preventDefault()
@@ -75,23 +83,6 @@ const QuoteFlow = ({
               setBusinessName((target as HTMLInputElement).value)
             }}
           />
-        </section>
-        <section>
-          <label htmlFor='industry'>Industry</label>
-          <select
-            id='industry'
-            required
-            value={industryId}
-            onChange={({ target }) => {
-              setIndustryId((target as HTMLSelectElement).value)
-            }}
-          >
-            <option value={0} hidden />
-            <option value={10537}>Plumber</option>
-            <option value={10391}>Software developer</option>
-            <option value={10415}>Lawyer</option>
-            <option value={10109}>Handyman</option>
-          </select>
         </section>
         <section>
           <label htmlFor='email'>Email</label>
@@ -175,9 +166,7 @@ const QuoteFlow = ({
           <button type='submit'>Get your quote!</button>
         </section>
       </form>
-    </BrowserRouter>
-  )
-}
+*/
 
 const stateToProps = ({
   quoteFlow: {
