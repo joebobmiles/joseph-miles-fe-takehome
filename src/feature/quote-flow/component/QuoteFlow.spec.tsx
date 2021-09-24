@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect'
 
 import QuoteFlow from './QuoteFlow'
 
-describe('QuoteFlow', () => {
+describe.skip('QuoteFlow', () => {
   describe('Business name section', () => {
     it('Has the label "Business Name."', () => {
       render(<QuoteFlow />)
