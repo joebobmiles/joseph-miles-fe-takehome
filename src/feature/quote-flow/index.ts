@@ -1,2 +1,2 @@
-export * from './component'
+export { QuoteFlow } from './component'
 export * from './store'
