@@ -1,18 +1,24 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
-import { IndustryForm, BusinessInfoForm, ContactInfoForm } from '../component'
+import { BusinessInfo } from './BusinessInfo'
+import { Contact } from './Contact'
+import { Industry } from './Industry'
+import { Result } from './Result'
 
 export const QuoteFlowRoutes = (): JSX.Element => (
   <>
     <Route path='/industry'>
-      <IndustryForm />
+      <Industry />
     </Route>
     <Route path='/businessinfo'>
-      <BusinessInfoForm />
+      <BusinessInfo />
     </Route>
     <Route path='/contact'>
-      <ContactInfoForm />
+      <Contact />
+    </Route>
+    <Route path='/result'>
+      <Result />
     </Route>
   </>
 )
