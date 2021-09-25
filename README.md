@@ -1,5 +1,17 @@
 # Frontend Take Home Project
 
+## Reflections
+
+While I completed the functional aspects of the project, there are some things
+that I was unable to tackle due to lack of time. The most obvious was styling.
+I planned to use Sass Modules to style the components and pages in a way
+reminiscent of Coterie's styling for the insurance quote flow. Additionally,
+I would have extracted components from the Result route, which currently
+contains all the logic and validation for displaying the results to the user.
+I would have preferred to have this logic reside in the component directory
+and broken up into two components, one to handle the fetch request and error
+state and another to handle the display of the policy list.
+
 ## Task
 
 One of Coterie’s core frontend projects is our insurance quote flow
