@@ -107,21 +107,21 @@ export const Result = (): JSX.Element => {
             response.availablePolicyTypes.length === 0
               ? <p>You do not qualify for any policy types.</p>
               : (
-                  <>
-                    <p>You have the available policy types:</p>
-                    <ul>
-                      {
-                        response.availablePolicyTypes.map(
-                          (type: string, i: number) =>
-                            <li key={i}>
-                              {policyTypeMap[type]}
-                            </li>
-                        )
-                      }
-                    </ul>
-                  </>
-                )
-            )
+                <>
+                  <p>You have the available policy types:</p>
+                  <ul>
+                    {
+                      response.availablePolicyTypes.map(
+                        (type: string, i: number) =>
+                          <li key={i}>
+                            {policyTypeMap[type]}
+                          </li>
+                      )
+                    }
+                  </ul>
+                </>
+              )
+          )
       )
   )
 }
