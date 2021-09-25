@@ -1,33 +1,9 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { Dispatch } from 'redux'
 import { BrowserRouter, Switch } from 'react-router-dom'
 
-import { RootState } from '@/type'
-import {
-  setBusinessName,
-  setContactEmail,
-  setGrossAnnualSales,
-  setAnnualPayroll,
-  setNumEmployees,
-  setIndustryId,
-  setZip
-} from '../store'
 import { QuoteFlowRoutes } from '../route'
 
-type QuoteFlowProps =
-  Partial<ReturnType<typeof stateToProps>> &
-  Partial<ReturnType<typeof dispatchToProps>>
-
-const QuoteFlow = ({
-  businessName = '', setBusinessName = () => null,
-  contactEmail = '', setContactEmail = () => null,
-  grossAnnualSales = 0, setGrossAnnualSales = () => null,
-  annualPayroll = 0, setAnnualPayroll = () => null,
-  numEmployees = 0, setNumEmployees = () => null,
-  industryId = '', setIndustryId = () => null,
-  zip = '', setZip = () => null
-}: QuoteFlowProps): JSX.Element => {
+export const QuoteFlow = (): JSX.Element => {
   return (
     <BrowserRouter basename='/getquote'>
       <Switch>
@@ -167,51 +143,3 @@ const QuoteFlow = ({
         </section>
       </form>
 */
-
-const stateToProps = ({
-  quoteFlow: {
-    businessName,
-    contactEmail,
-    grossAnnualSales,
-    annualPayroll,
-    numEmployees,
-    industryId,
-    zip
-  }
-}: RootState): {
-  businessName: string
-  contactEmail: string
-  grossAnnualSales: number
-  annualPayroll: number
-  numEmployees: number
-  industryId: string
-  zip: string
-} => ({
-  businessName,
-  contactEmail,
-  grossAnnualSales,
-  annualPayroll,
-  numEmployees,
-  industryId,
-  zip
-})
-
-const dispatchToProps = (dispatch: Dispatch): {
-  setBusinessName: (name: string) => void
-  setContactEmail: (email: string) => void
-  setGrossAnnualSales: (sales: number) => void
-  setAnnualPayroll: (payroll: number) => void
-  setNumEmployees: (employees: number) => void
-  setIndustryId: (industryId: string) => void
-  setZip: (zip: string) => void
-} => ({
-  setBusinessName: (name) => dispatch(setBusinessName(name)),
-  setContactEmail: (email) => dispatch(setContactEmail(email)),
-  setGrossAnnualSales: (sales) => dispatch(setGrossAnnualSales(sales)),
-  setAnnualPayroll: (payroll) => dispatch(setAnnualPayroll(payroll)),
-  setNumEmployees: (employees) => dispatch(setNumEmployees(employees)),
-  setIndustryId: (id) => dispatch(setIndustryId(id)),
-  setZip: (zip) => dispatch(setZip(zip))
-})
-
-export default connect(stateToProps, dispatchToProps)(QuoteFlow)
