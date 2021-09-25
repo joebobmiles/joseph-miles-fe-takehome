@@ -93,7 +93,22 @@ export const Result = (): JSX.Element => {
 
   return (
     isLoading
-      ? <p>Loading...</p>
-      : <pre>{JSON.stringify(response)}</pre>
+      ? (<p>Loading...</p>)
+      : (
+        response.isSuccess === false
+          ? <p>There is an error in your form.</p>
+          : (
+            <>
+              <p>You have the available policy types:</p>
+              <ul>
+                {
+                  response.availablePolicyTypes.map(
+                    (type: string, i: number) => <li key={i}>{type}</li>
+                  )
+                }
+              </ul>
+            </>
+          )
+      )
   )
 }
