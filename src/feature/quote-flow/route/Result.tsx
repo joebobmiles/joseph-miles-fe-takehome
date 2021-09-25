@@ -4,6 +4,12 @@ import { useSelector } from 'react-redux'
 import { PARTNER_TOKEN } from '@/config'
 import { RootState } from '@/type'
 
+const policyTypeMap: { [_: string]: string } = {
+  GL: 'General Liability',
+  PL: 'Professional Liability',
+  BOP: 'Business Owner\'s Policy'
+}
+
 export const Result = (): JSX.Element => {
   const [isLoading, setIsLoading] = React.useState(true)
   const [response, setResponse] = React.useState<any>({})
@@ -98,17 +104,24 @@ export const Result = (): JSX.Element => {
         response.isSuccess === false
           ? <p>There is an error in your form.</p>
           : (
-            <>
-              <p>You have the available policy types:</p>
-              <ul>
-                {
-                  response.availablePolicyTypes.map(
-                    (type: string, i: number) => <li key={i}>{type}</li>
-                  )
-                }
-              </ul>
-            </>
-          )
+            response.availablePolicyTypes.length === 0
+              ? <p>You do not qualify for any policy types.</p>
+              : (
+                  <>
+                    <p>You have the available policy types:</p>
+                    <ul>
+                      {
+                        response.availablePolicyTypes.map(
+                          (type: string, i: number) =>
+                            <li key={i}>
+                              {policyTypeMap[type]}
+                            </li>
+                        )
+                      }
+                    </ul>
+                  </>
+                )
+            )
       )
   )
 }
