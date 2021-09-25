@@ -2,7 +2,7 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
-import QuoteFlow from './QuoteFlow'
+import { QuoteFlow } from './QuoteFlow'
 
 describe.skip('QuoteFlow', () => {
   describe('Business name section', () => {
