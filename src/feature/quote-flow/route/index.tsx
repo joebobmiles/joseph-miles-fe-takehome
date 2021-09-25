@@ -19,10 +19,6 @@ const routes = [
   {
     path: '/contact',
     component: Contact
-  },
-  {
-    path: '/result',
-    component: Result
   }
 ]
 
@@ -41,6 +37,9 @@ export const QuoteFlowRoutes = (): JSX.Element => (
         </Route>
       ))
     }
+    <Route path='/result'>
+      <Result />
+    </Route>
     <Route path='*'>
       <Redirect to='/industry' />
     </Route>

@@ -23,7 +23,7 @@ export default ({
       {
         nextPath !== undefined
           ? <Link to={nextPath}>Next</Link>
-          : <a>Next</a>
+          : <Link to='/result'>Submit</Link>
       }
     </section>
   </Layout>
