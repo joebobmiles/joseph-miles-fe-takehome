@@ -1,5 +1,6 @@
 import React from 'react'
-import { Route, Redirect, Link } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
+import QuoteFlowLayout from '../component/QuoteFlowLayout'
 
 import { BusinessInfo } from './BusinessInfo'
 import { Contact } from './Contact'
@@ -30,21 +31,13 @@ export const QuoteFlowRoutes = (): JSX.Element => (
     {
       routes.map((route, i, routes) => (
         <Route key={i} path={route.path}>
-          <route.component />
-          <section>
-            {
-              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-              <Link to={(i - 1) > -1 ? routes.at(i - 1)!.path : ''}>
-                Go Back
-              </Link>
-            }
-            {
-              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-              <Link to={(i + 1) < routes.length ? routes.at(i + 1)!.path : ''}>
-                Next
-              </Link>
-            }
-          </section>
+          <QuoteFlowLayout
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            prevPath={(i - 1) > -1 ? routes.at(i - 1)!.path : undefined}
+            nextPath={routes.at(i + 1)?.path}
+          >
+            <route.component />
+          </QuoteFlowLayout>
         </Route>
       ))
     }
